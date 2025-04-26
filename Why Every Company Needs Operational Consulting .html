@@ -1,32 +1,157 @@
-
-<html
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why Every Company Needs Operational Consulting</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a2d9d5a58f.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary-color: #27ae60;
+      --background-light: #f4f6f8;
+      --background-dark: #121212;
+      --text-light: #333;
+      --text-dark: #ddd;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: var(--background-light);
+      color: var(--text-light);
+      line-height: 1.6;
+      transition: all 0.3s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+      }
+      .container {
+        background: #1e1e1e;
+        box-shadow: 0 6px 12px rgba(255,255,255,0.1);
+      }
+    }
+
+    .container {
+      background: #fff;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    ol {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 35px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    li.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .point-title {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    .point-title i {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: inherit;
+    }
+  </style>
 </head>
+
 <body>
+
+  <div class="container">
+    <h1>Why Every Company Needs Operational Consulting</h1>
     <ol>
-        <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            </ol>
+      <li>
+        <div class="point-title"><i class="fas fa-search"></i> Identify Inefficiencies</div>
+        <p>Operational consultants help uncover bottlenecks and hidden inefficiencies that may be slowing down your company's growth and profitability.</p>
+      </li>
+
+      <li>
+        <div class="point-title"><i class="fas fa-lightbulb"></i> Bring Fresh Perspective</div>
+        <p>External experts offer unbiased insights and innovative ideas that internal teams might overlook due to being too close to daily operations.</p>
+      </li>
+
+      <li>
+        <div class="point-title"><i class="fas fa-cogs"></i> Optimize Processes</div>
+        <p>Consultants refine workflows, streamline supply chains, and modernize technology use to drive better outcomes faster and at lower costs.</p>
+      </li>
+
+      <li>
+        <div class="point-title"><i class="fas fa-chart-line"></i> Accelerate Growth</div>
+        <p>With improved operational efficiency, companies can allocate resources smarter, scale faster, and adapt to new market opportunities.</p>
+      </li>
+
+      <li>
+        <div class="point-title"><i class="fas fa-balance-scale"></i> Manage Risks</div>
+        <p>Operational consultants help identify risks early and design contingency plans, ensuring your company stays resilient through disruption or uncertainty.</p>
+      </li>
+
+      <li>
+        <div class="point-title"><i class="fas fa-user-friends"></i> Empower Your Team</div>
+        <p>Training and upskilling your employees on new systems and processes creates a culture of continuous improvement and adaptability.</p>
+      </li>
+    </ol>
+  </div>
+
+  <script>
+    // Scroll animation
+    const points = document.querySelectorAll('li');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    points.forEach(point => {
+      observer.observe(point);
+    });
+  </script>
+
 </body>
 </html>
